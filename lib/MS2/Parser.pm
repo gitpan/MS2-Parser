@@ -18,7 +18,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -39,16 +39,19 @@ Perhaps a little code snippet.
 =cut
 
 =head1 DESCRIPTION
+
 This is a Moose based parser for the MS2 file format. The MS2 file format is used to 
 record MS/MS spectra. A full description of the MS2 file format may be found in: 
 McDonald,W.H. et al. MS1, MS2, and SQT-three unified, compact, and easily parsed 
 file formats for the storage of shotgun proteomic spectra and identifications. 
 Rapid Commun. Mass Spectrom. 18, 2162-2168 (2004).
+
 =cut
 
 =head2 Methods
 
 =head3 parse
+
 This is the main function to call. The parse method recieves a path to the ms2 file
 and returns a Moose object containing two attributes; A MS2::Header (header info) 
 and a list of MS2::Scan (scan info).
