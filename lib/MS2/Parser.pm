@@ -14,17 +14,15 @@ MS2::Parser - A parser for MS2 files, commonly used in mass spectrometry based p
 
 =head1 VERSION
 
-Version 0.01
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
 Quick summary of what the module does.
-
-Perhaps a little code snippet.
 
     use MS2::Parser;
 
@@ -99,14 +97,22 @@ The MS2 object has a MS2::Scan object list with the following structure:
         internals: {
             ActivationType     "CID",
             Charge             7,
-            Data               {
-                308.8282   15.6,
-                362.2597   27.8,
-                390.5037   12.6,
-                547.0424   16.2,
-                563.5495   28.7,
-                661.8907   15.6
-            },
+            DataIntensity      [
+                [0] 15.6,
+                [1] 27.8,
+                [2] 12.6,
+                [3] 16.2,
+                [4] 28.7,
+                [5] 15.6
+            ],
+            DataMZ             [
+                [0] 308.8282,
+                [1] 362.2597,
+                [2] 390.5037,
+                [3] 547.0424,
+                [4] 563.5495,
+                [5] 661.8907
+            ],
             FirstScan          000006,
             InstrumentType     "ITMS",
             IonInjectionTime   25.000,
@@ -118,9 +124,9 @@ The MS2 object has a MS2::Scan object list with the following structure:
             RetTime            0.03,
             SecondScan         000006
         }
-    }
 
-The Data attribute is represented as a Hash reference.
+The Data attribute is represented by two distinct array references; DataMZ and DataIntensity.
+Both arrays are used to maintain the data order.
 
 
 =cut
