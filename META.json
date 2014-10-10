@@ -24,7 +24,7 @@
          "requires" : {
             "Moose" : "0",
             "Test::More" : "0",
-            "namesapce::autoclean" : "0"
+            "namespace::autoclean" : "0"
          }
       },
       "configure" : {
@@ -39,5 +39,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.04"
+   "version" : "0.05"
 }

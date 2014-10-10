@@ -14,11 +14,11 @@ MS2::Parser - A parser for MS2 files, commonly used in mass spectrometry based p
 
 =head1 VERSION
 
-Version 0.04'
+Version 0.05'
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 SYNOPSIS
 
